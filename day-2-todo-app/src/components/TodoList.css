@@ -1,0 +1,118 @@
+.todo-list-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 2rem 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.todo-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.todo-header h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.todo-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.todo-card {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+}
+
+.todos-container {
+    margin: 1.5rem 0;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: #666;
+    font-style: italic;
+}
+
+.empty-state p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.todo-actions {
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.clear-completed-btn {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.clear-completed-btn:hover {
+    background: #c0392b;
+    transform: translateY(-2px);
+}
+
+/* Scrollbar styling */
+.todos-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.todos-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.todos-container::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+}
+
+.todos-container::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .todo-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .todo-card {
+        padding: 1.5rem;
+        margin: 0 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .todo-header h1 {
+        font-size: 2rem;
+    }
+
+    .todo-header p {
+        font-size: 1rem;
+    }
+
+    .todo-card {
+        padding: 1rem;
+    }
+}
