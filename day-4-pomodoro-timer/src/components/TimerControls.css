@@ -1,0 +1,82 @@
+.timer-controls {
+    margin-bottom: 2rem;
+}
+
+.control-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.control-btn {
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: 120px;
+    justify-content: center;
+}
+
+.control-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.control-btn:active {
+    transform: translateY(-1px);
+}
+
+.start-btn {
+    background: #27ae60;
+    color: white;
+}
+
+.start-btn:hover {
+    background: #219653;
+}
+
+.pause-btn {
+    background: #e67e22;
+    color: white;
+}
+
+.pause-btn:hover {
+    background: #d35400;
+}
+
+.reset-btn {
+    background: #e74c3c;
+    color: white;
+}
+
+.reset-btn:hover {
+    background: #c0392b;
+}
+
+.skip-btn {
+    background: #3498db;
+    color: white;
+}
+
+.skip-btn:hover {
+    background: #2980b9;
+}
+
+@media (max-width: 480px) {
+    .control-buttons {
+        gap: 0.5rem;
+    }
+
+    .control-btn {
+        padding: 0.8rem 1rem;
+        font-size: 1rem;
+        min-width: 100px;
+    }
+}

@@ -1,0 +1,111 @@
+.pomodoro-timer-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 2rem 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.timer-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: white;
+    position: relative;
+}
+
+.timer-header h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.timer-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 1rem;
+}
+
+.settings-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.settings-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.timer-card {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+}
+
+.timer-tips {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 15px;
+    border-left: 4px solid #3498db;
+}
+
+.timer-tips h3 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+    font-size: 1.2rem;
+}
+
+.timer-tips ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.timer-tips li {
+    padding: 0.5rem 0;
+    color: #555;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.timer-tips li:before {
+    content: '💡';
+    position: absolute;
+    left: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .timer-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .timer-card {
+        padding: 1.5rem;
+        margin: 0 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .timer-header h1 {
+        font-size: 2rem;
+    }
+
+    .timer-header p {
+        font-size: 1rem;
+    }
+
+    .timer-card {
+        padding: 1rem;
+    }
+}
