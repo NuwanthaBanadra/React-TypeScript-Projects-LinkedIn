@@ -1,0 +1,34 @@
+.expense-chart {
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.expense-chart h3 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+    text-align: center;
+}
+
+.chart-container {
+    height: 300px;
+    position: relative;
+}
+
+.no-data {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+}
+
+.no-data-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+}
+
+.no-data p {
+    margin: 0;
+    font-style: italic;
+}
