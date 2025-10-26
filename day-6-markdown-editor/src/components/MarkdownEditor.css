@@ -1,0 +1,211 @@
+.markdown-editor {
+    min-height: 100vh;
+    background: var(--bg-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.markdown-editor.light {
+    --bg-color: #f8f9fa;
+    --surface-color: #ffffff;
+    --text-color: #2c3e50;
+    --text-secondary: #666;
+    --primary-color: #3498db;
+    --border-color: #e0e0e0;
+}
+
+.markdown-editor.dark {
+    --bg-color: #1a1a1a;
+    --surface-color: #2d2d2d;
+    --text-color: #ffffff;
+    --text-secondary: #b0b0b0;
+    --primary-color: #4ecdc4;
+    --border-color: #404040;
+}
+
+.editor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: var(--surface-color);
+    border-bottom: 2px solid var(--border-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-left .document-title {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.header-left .document-title:hover {
+    background: var(--border-color);
+}
+
+.title-input {
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: 2px solid var(--primary-color);
+    border-radius: 4px;
+    padding: 0.5rem;
+    background: var(--surface-color);
+    color: var(--text-color);
+    width: 300px;
+}
+
+.header-right {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.editor-container {
+    display: flex;
+    height: calc(100vh - 140px);
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+.editor-sidebar {
+    width: 280px;
+    background: var(--surface-color);
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.editor-main {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.editor-panel,
+.preview-panel {
+    background: var(--surface-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    background: var(--surface-color);
+}
+
+.panel-header h3 {
+    margin: 0;
+    color: var(--text-color);
+    font-size: 1.1rem;
+}
+
+.panel-info {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    background: var(--border-color);
+    padding: 0.3rem 0.6rem;
+    border-radius: 12px;
+}
+
+.editor-textarea {
+    flex: 1;
+    border: none;
+    outline: none;
+    resize: none;
+    padding: 1rem;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    background: var(--surface-color);
+    color: var(--text-color);
+    border-radius: 0 0 8px 8px;
+}
+
+.editor-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: var(--surface-color);
+    border-top: 1px solid var(--border-color);
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.footer-stats {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-info {
+    font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .editor-main {
+        grid-template-columns: 1fr;
+    }
+
+    .editor-sidebar {
+        width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .editor-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .editor-sidebar {
+        width: 100%;
+        order: 2;
+    }
+
+    .editor-main {
+        order: 1;
+    }
+
+    .editor-header {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: stretch;
+    }
+
+    .header-right {
+        justify-content: center;
+    }
+
+    .footer-stats {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .editor-header,
+    .editor-container,
+    .editor-footer {
+        padding: 0.5rem;
+    }
+
+    .editor-main {
+        grid-template-columns: 1fr;
+    }
+}
