@@ -1,0 +1,136 @@
+.memory-game {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 2rem 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    height: calc(100vh - 4rem);
+}
+
+.game-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.game-main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.game-instructions {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.game-instructions h3 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+    font-size: 1.2rem;
+}
+
+.game-instructions ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.game-instructions li {
+    padding: 0.5rem 0;
+    color: #555;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.game-instructions li:before {
+    content: '🎯';
+    position: absolute;
+    left: 0;
+}
+
+.start-prompt {
+    text-align: center;
+    padding: 3rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.start-prompt h2 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.start-prompt p {
+    margin-bottom: 2rem;
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.start-game-btn {
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+}
+
+.start-game-btn:hover {
+    background: #219653;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(39, 174, 96, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .game-container {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .game-sidebar {
+        order: 2;
+    }
+
+    .game-main {
+        order: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .memory-game {
+        padding: 1rem;
+    }
+
+    .game-container {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .start-prompt {
+        padding: 2rem 1rem;
+    }
+
+    .start-game-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1.1rem;
+    }
+}
