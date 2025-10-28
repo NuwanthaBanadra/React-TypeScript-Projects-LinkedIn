@@ -1,0 +1,77 @@
+.canvas-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+}
+
+.canvas-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border-bottom: 2px solid #f0f0f0;
+    background: white;
+}
+
+.canvas-header h3 {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 1.2rem;
+}
+
+.clear-canvas-btn {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.clear-canvas-btn:hover {
+    background: #c0392b;
+    transform: translateY(-1px);
+}
+
+.drawing-canvas {
+    flex: 1;
+    background: white;
+    cursor: crosshair;
+    display: block;
+    border-radius: 0 0 15px 15px;
+}
+
+.drawing-canvas:active {
+    cursor: grabbing;
+}
+
+/* Canvas border effect */
+.drawing-canvas {
+    border: 2px solid #e0e0e0;
+}
+
+/* Responsive canvas */
+@media (max-width: 768px) {
+    .canvas-header {
+        padding: 0.8rem 1rem;
+    }
+
+    .canvas-header h3 {
+        font-size: 1.1rem;
+    }
+
+    .clear-canvas-btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+}
