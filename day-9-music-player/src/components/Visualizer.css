@@ -1,0 +1,29 @@
+.visualizer {
+    padding: 2rem;
+    text-align: center;
+}
+
+.visualizer h3 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+    font-size: 1.3rem;
+}
+
+.visualizer-canvas {
+    width: 100%;
+    max-width: 800px;
+    height: 200px;
+    background: #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .visualizer {
+        padding: 1.5rem;
+    }
+
+    .visualizer-canvas {
+        height: 150px;
+    }
+}
