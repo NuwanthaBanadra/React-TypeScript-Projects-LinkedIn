@@ -1,0 +1,156 @@
+.calc-btn {
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0.5rem;
+    min-height: 60px;
+    user-select: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.calc-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.calc-btn:hover::before {
+    left: 100%;
+}
+
+.calc-btn:active {
+    transform: scale(0.95);
+}
+
+/* Light Theme */
+.calc-btn.light {
+    background: rgba(255, 255, 255, 0.9);
+    color: #2c3e50;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.calc-btn.light:hover {
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Dark Theme */
+.calc-btn.dark {
+    background: rgba(52, 73, 94, 0.9);
+    color: #ecf0f1;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.calc-btn.dark:hover {
+    background: rgba(52, 73, 94, 1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Professional Theme */
+.calc-btn.professional {
+    background: rgba(72, 84, 96, 0.9);
+    color: #bdc3c7;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.calc-btn.professional:hover {
+    background: rgba(72, 84, 96, 1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Button Types */
+.btn-number {
+    background: rgba(255, 255, 255, 0.8) !important;
+}
+
+.btn-number.light {
+    background: rgba(255, 255, 255, 0.95) !important;
+}
+
+.btn-operation {
+    background: rgba(52, 152, 219, 0.8) !important;
+    color: white !important;
+}
+
+.btn-operation:hover {
+    background: rgba(52, 152, 219, 1) !important;
+}
+
+.btn-function {
+    background: rgba(155, 89, 182, 0.8) !important;
+    color: white !important;
+    font-size: 1rem !important;
+}
+
+.btn-function:hover {
+    background: rgba(155, 89, 182, 1) !important;
+}
+
+.btn-memory {
+    background: rgba(241, 196, 15, 0.8) !important;
+    color: #2c3e50 !important;
+    font-size: 1rem !important;
+}
+
+.btn-memory:hover {
+    background: rgba(241, 196, 15, 1) !important;
+}
+
+.btn-utility {
+    background: rgba(149, 165, 166, 0.8) !important;
+    color: white !important;
+}
+
+.btn-utility:hover {
+    background: rgba(149, 165, 166, 1) !important;
+}
+
+/* Special buttons */
+.equals-btn {
+    background: rgba(46, 204, 113, 0.8) !important;
+    color: white !important;
+}
+
+.equals-btn:hover {
+    background: rgba(46, 204, 113, 1) !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .calc-btn {
+        font-size: 1.1rem;
+        padding: 0.8rem 0.3rem;
+        min-height: 50px;
+        border-radius: 8px;
+    }
+
+    .btn-function {
+        font-size: 0.9rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .calc-btn {
+        font-size: 1rem;
+        padding: 0.6rem 0.2rem;
+        min-height: 45px;
+        border-radius: 6px;
+    }
+
+    .btn-function {
+        font-size: 0.8rem !important;
+    }
+}

@@ -1,0 +1,77 @@
+.theme-selector {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.theme-label {
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.theme-options {
+    display: flex;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 0.25rem;
+}
+
+.theme-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 6px;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.theme-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.theme-btn.active {
+    background: rgba(52, 152, 219, 0.8);
+    color: white;
+}
+
+.theme-icon {
+    font-size: 1rem;
+}
+
+.theme-name {
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .theme-selector {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+    }
+
+    .theme-options {
+        justify-content: center;
+    }
+
+    .theme-btn {
+        flex: 1;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .theme-btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    .theme-name {
+        display: none;
+    }
+}
